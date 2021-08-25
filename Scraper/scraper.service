@@ -1,0 +1,11 @@
+[Unit]
+Description=Scrapes trentinotrasporti.it for downloading the CSV-GTFS files
+Wants=scraper.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python /etc/api_scraper/scraper.py
+
+[Install]
+WantedBy=multi-user.target
+
